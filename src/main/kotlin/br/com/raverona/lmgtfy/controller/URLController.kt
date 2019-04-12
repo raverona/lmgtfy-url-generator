@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class URLController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
 
-    @RequestMapping(value = ["/"], method = [RequestMethod.GET], produces = ["application/json"])
+    @RequestMapping(value = ["/"], method = [RequestMethod.POST], produces = ["application/json"])
     fun getLmgtfyURL(
             @RequestParam
             providerName: String,
