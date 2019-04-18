@@ -2,15 +2,19 @@
 
 ### What is it?
 
-It is a web service made with Kotlin and Spring MVC that takes three parameters and responds with a lmgtfy link
+It is a web service made with Kotlin and Spring MVC that takes a query parameter and responds with a lmgtfy link
 
 ##### What is lmgtfy?
 
 lmgtfy, short for "let me google that for you", is a web service that helps people who don't know how to google stuff (it can be hard sometimes)
 
+### Ok, but what is its purpose?
+
+It's purpose is to be the back-end of a Slack Bot that answers a command with a search query with a lmgtfy link for the same query
+
 ### How it works?
 
-It's a web server, you make a HTTP request it sends a response, failing or succeeding, simple as that 
+It's a web server, you make a HTTP POST request it sends a response, failing or succeeding, simple as that 
 
 ### How do I run it?
 
@@ -22,4 +26,4 @@ This repository is pretty much pointless, but if you really think something shou
 
 ### What are the next steps?
 
-It needs to restrict the search type based on the choosen provider
+It needs implement all available providers and search types and restrict the search type based on the choosen provider
