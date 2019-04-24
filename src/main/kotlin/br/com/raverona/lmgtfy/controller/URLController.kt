@@ -1,10 +1,10 @@
 package br.com.raverona.lmgtfy.controller
 
-import br.com.raverona.lmgtfy.provider.getProvider
+import br.com.raverona.lmgtfy.provider.Provider
 import br.com.raverona.lmgtfy.query.Query
 import br.com.raverona.lmgtfy.request.SlackPayload
 import br.com.raverona.lmgtfy.response.SlackResponse
-import br.com.raverona.lmgtfy.searchType.getSearchType
+import br.com.raverona.lmgtfy.searchType.SearchType
 import br.com.raverona.lmgtfy.url.LmgtfyURL
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.web.bind.annotation.*
@@ -18,8 +18,8 @@ class URLController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
 
         val lmgtfyURL = LmgtfyURL(
                 baseURL = lmgtfyBaseURL,
-                provider = getProvider("google"),
-                searchType = getSearchType("web"),
+                provider = Provider.getByName("google"),
+                searchType = SearchType.getByName("web"),
                 query = Query(slackPayload.text)
         )
 
