@@ -30,13 +30,13 @@ class URLController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
     fun getHelpMessage(slackPayload: SlackPayload): SlackResponse {
         return SlackResponse(
                 response_type = "in_channel",
-                text = """Hi ${slackPayload.user_name}, here's how I work:
+                text = """Hi *${slackPayload.user_name}*, here's how I work:
                     |type a command followed by a serch criteria and I'll answer you with a link
                     |to solve your search needs based on the command used
                     |the commands have the following format:
-                    |/(provider) (stuff I want to search)
-                    |available providers are: Aol, Ask, Bing, DuckDuckGo, Google and Yahoo
-                    |exemple: /google I don't know how to google stuff
+                    |`/(provider) (stuff I want to search)`
+                    |available providers are: _Aol_, _Ask_, _Bing_, _DuckDuckGo_, _Google_ and _Yahoo_
+                    |exemple: `/google I don't know how to google stuff`
                 """.trimMargin())
     }
 }
