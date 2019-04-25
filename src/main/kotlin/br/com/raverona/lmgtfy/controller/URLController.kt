@@ -18,7 +18,7 @@ class URLController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
 
         val lmgtfyURL = LmgtfyURL(
                 baseURL = lmgtfyBaseURL,
-                provider = Provider.getByName("google"),
+                provider = Provider.getByName(slackPayload.providerName),
                 searchType = SearchType.getByName("web"),
                 query = Query(slackPayload.text)
         )

@@ -18,12 +18,8 @@ It's a web server, you make a HTTP POST request it sends a response, failing or 
 
 ### How do I run it?
 
-`./gradlew bootRun` can be a good way to start
+`./gradlew bootRun` can be a good way to start it locally
 
 ### How do I contribute?
 
 This repository is pretty much pointless, but if you really think something should or can be improved fork it and make a pull request
-
-### What are the next steps?
-
-It needs implement all available providers and search types and restrict the search type based on the choosen provider
