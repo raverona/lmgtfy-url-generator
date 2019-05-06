@@ -11,7 +11,7 @@ import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.*
 
 @RestController
-class URLController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
+class CommandController(@Value("\${lmgtfy.base.url}") val lmgtfyBaseURL: String) {
 
     @RequestMapping(value = ["/"], method = [RequestMethod.POST], produces = [MediaType.APPLICATION_JSON_VALUE], consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE])
     fun getLmgtfyURL(slackPayload: SlackPayload): SlackResponse {
